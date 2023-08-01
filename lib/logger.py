@@ -48,12 +48,12 @@ class Logger:
         except Exception as e:
             print('Clearing File Error: ', str(e))
 
-        file = open(self.fileName, 'at')
+        file = open(self.fileName, 'at', encoding='utf-8')
         file.write(message + '\n')
         file.close()
         
     def __clearLogFile(self):
-        file = open(self.fileName, 'rt')
+        file = open(self.fileName, 'rt', encoding='utf-8')
         lines = file.readlines()
         file.close()
 
@@ -61,7 +61,7 @@ class Logger:
         print(lenght)       
         lines = lines[lenght:]            
 
-        file = open(self.fileName, 'wt')
+        file = open(self.fileName, 'wt', encoding='utf-8')
         
         for line in lines:
             file.write(line)
