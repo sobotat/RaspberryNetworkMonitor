@@ -65,7 +65,7 @@ if __name__ == '__main__':
     Logger.fileName = 'output.log'
     
     try:
-        NetMonitor(1).start()
+        NetMonitor(300).start()
     except Exception as e:
         print(str(e))
         sys.exit(2)
